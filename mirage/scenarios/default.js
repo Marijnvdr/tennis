@@ -1,13 +1,51 @@
+import Ember from 'ember';
+
 export default function(server) {
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
+  for (let item of getPlayers()) {
+    server.create('player', { lastName: item.lastName });    
+  }  
+}
 
-    Make sure to define a factory for each model you want to create.
-  */
+function getPlayers() {
+  let arFirstName = getPlayersFirstName();
+  let arLastName = getPlayersLastName();  
+  let arPlayers = [];
+  for (let i = 0; i < 10; i++) {
+    let player = {};
+    player.firstName = arFirstName[i];
+    player.lastName = arLastName[i];
+    arPlayers.push(player);
+  }
+  return arPlayers;
+}
 
-  // server.create('player', { lastName: 'Federer' } );
-  server.createList('player', 10);
-  
+function getPlayersFirstName() {
+let ar =
+['Roger',
+'Novak',
+'Rafael',
+'Andy',
+'Jo-Wilfried',
+'Thomas',
+'Juan Martin',
+'Janko',
+'David',
+'Juan'];
+return ar; 
+}
+
+function getPlayersLastName() {
+let ar = 
+['Federer',
+'Djokovic',
+'Nadal',
+'Murray',
+'Tsonga',
+'Berdych',
+'Del Potro',
+'Tipsarevic',
+'Ferrer',
+'Monaco'];
+return ar;
 }
