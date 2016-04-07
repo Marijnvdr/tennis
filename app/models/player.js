@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  lastName: DS.attr(),
-  firstName: DS.attr()
+  firstName: DS.attr(),
+  lastName: DS.attr()
 });

@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('player', { path: '/' });
+  this.route('seeding', { path: '/seeding' });
 });
 
 export default Router;
