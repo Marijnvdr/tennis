@@ -5,4 +5,16 @@ export default function() {
 
   this.get('/players');
   this.get('/seedings');
+  
+  /*
+  this.get('/seedings', (schema, request) => {
+    let year = request.queryParams.year;
+    if (year) {
+      return schema.db.seedings.where({year: year}); // This will return a plain POCO object, not valid JSON.
+    } else {
+      return schema.seeding.all();
+    }
+    var id = request.params.id;
+  });
+  */
 }
