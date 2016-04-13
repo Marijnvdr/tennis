@@ -8,11 +8,16 @@ export default function(server) {
     server.create('player', { firstName: item.firstName, lastName: item.lastName });    
   }  
   for (let item of getSeedings(1, 2016)) {
-    server.create('seeding', { year: 2016, tournament: 1, seedingNr: item.seedingNr, playerNr: item.playerNr });        
+    server.create('seeding', { year: 2016, tournament: 1, seedingNr: item.seedingNr, playerId: item.playerId });        
   }
   for (let item of getSeedings(1, 2015)) {
-    server.create('seeding', { year: 2015, tournament: 1, seedingNr: item.seedingNr, playerNr: item.playerNr });        
+    server.create('seeding', { year: 2015, tournament: 1, seedingNr: item.seedingNr, playerId: item.playerId });        
   }
+  
+  server.createList('blog-post', 10);
+
+  let author = server.create('author', {name: 'Zelda'});
+  server.createList('blog-post', 20, {authorId: author.id});  
 }
 
 function getPlayers() {
@@ -37,7 +42,7 @@ function getSeedings(tournamentNr, year) {
   for (let i = 0; i < arSeedings.length; i++) {
     let info = {};
     info.seedingNr = arSeedings[i];
-    info.playerNr = arPlayers[i];
+    info.playerId = arPlayers[i];
     ar.push(info);
   }
   return ar;

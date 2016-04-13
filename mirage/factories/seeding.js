@@ -4,5 +4,5 @@ export default Factory.extend({
   year: 0,
   tournament: 0,
   seedingNr: 0,
-  playerNr: 0
+  player: null
 });

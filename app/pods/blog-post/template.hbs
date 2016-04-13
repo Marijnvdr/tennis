@@ -1,0 +1,6 @@
+<h1>Blog Posts:</h1>
+<ul>
+  {{#each model as |blog|}}
+    <li>{{blog.name}} {{blog.author.name}}</li>
+  {{/each}}
+</ul>

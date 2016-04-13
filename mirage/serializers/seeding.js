@@ -1,7 +1,7 @@
 import { JSONAPISerializer } from 'ember-cli-mirage';
 
 export default JSONAPISerializer.extend({
-  embed: true
+  include: ['player']
   /*
   serialize(object, request) {
     // This is how to call super, as Mirage borrows [Backbone's implementation of extend](http://backbonejs.org/#Model-extend)

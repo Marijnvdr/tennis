@@ -5,6 +5,7 @@ export default function() {
 
   this.get('/players');
   this.get('/seedings');
+  this.get('/blog-posts');
   
   /*
   this.get('/seedings', (schema, request) => {

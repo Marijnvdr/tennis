@@ -4,5 +4,5 @@ export default DS.Model.extend({
   year: DS.attr(),
   tournament: DS.attr(),
   seedingNr: DS.attr(),
-  playerNr: DS.attr()
+  player: DS.belongsTo('player')
 });
