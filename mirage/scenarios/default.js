@@ -16,7 +16,7 @@ export default function(server) {
   
   server.createList('blog-post', 10);
 
-  let author = server.create('author', {name: 'Zelda'});
+  let author = server.create('author');
   server.createList('blog-post', 20, {authorId: author.id});  
 }
 
