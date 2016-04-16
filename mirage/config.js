@@ -4,6 +4,7 @@ export default function() {
   this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
   // this.get('/players');
+  this.get('/players');
   this.get('/seedings');
   this.get('/blog-posts');
   this.get('/authors/:id');

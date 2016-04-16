@@ -9,8 +9,6 @@ export default Ember.Route.extend({
       return this.store.findAll('seeding');
     } 
     */
-    return this.store.findAll('seeding');
-    /*   
     return this.store.findAll('seeding').then((seedings) => {
       if (!params.year) {
         return seedings;
@@ -18,6 +16,5 @@ export default Ember.Route.extend({
         return seedings.filterBy('year', Number(params.year));
       }
     });
-    */   
   }
 });

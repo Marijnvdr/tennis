@@ -14,8 +14,6 @@ export default function(server) {
     server.create('seeding', { year: 2015, tournament: 1, seedingNr: item.seedingNr, playerId: item.playerId });        
   }
   
-  server.createList('blog-post', 10);
-
   let author = server.create('author');
   server.createList('blog-post', 20, {authorId: author.id});  
 }
