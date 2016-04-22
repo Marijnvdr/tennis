@@ -1,6 +1,24 @@
-<h1>Seeding list:</h1>
-<ul>
-  {{#each model as |seeding|}}
-    <li>{{seeding.seedingNr}} {{seeding.player.lastName}}</li>
-  {{/each}}
-</ul>
+<h1>Results of seeded players:</h1>
+
+<table class="colored-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Player</th>
+      <th>Round</th>
+      <th></th>
+      <th>Opponent</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |seeding|}}
+      <tr>
+        <td>{{seeding.seedingNr}}</td>
+        <td>{{seeding.player.lastName}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>  
+    {{/each}}  
+  </tbody>      
+</table>  
