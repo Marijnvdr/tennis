@@ -8,7 +8,6 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('player', { path: '/' });
   this.route('seeding', { path: '/seeding' });
-  this.route('blog-post', { path: '/blog' });
 });
 
 export default Router;

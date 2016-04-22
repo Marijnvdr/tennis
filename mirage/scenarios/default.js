@@ -12,10 +12,7 @@ export default function(server) {
   }
   for (let item of getSeedings(1, 2015)) {
     server.create('seeding', { year: 2015, tournament: 1, seedingNr: item.seedingNr, playerId: item.playerId });        
-  }
-  
-  let author = server.create('author');
-  server.createList('blog-post', 20, {authorId: author.id});  
+  }  
 }
 
 function getPlayers() {
