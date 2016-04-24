@@ -1,0 +1,10 @@
+table.colored-table {
+  max-width: 100%;
+  width: 100%;
+  table-layout: fixed;
+  background-color: yellow;
+    
+  th {
+    background-color: green;
+  }
+}
