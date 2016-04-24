@@ -7,7 +7,7 @@ module.exports = function(defaults) {
     // Add options here
     sassOptions: {
       includePaths: [
-        'app/styles'
+        'app'
       ]
     }    
   });
