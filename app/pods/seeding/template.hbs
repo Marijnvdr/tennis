@@ -1,4 +1,4 @@
-<h1>Results of seeded players:</h1>
+<h2>Results of seeded players:</h2>
 
  <!-- see: app\routes\components\file-table\style.scss --> 
 <table class="colored-table">
@@ -16,9 +16,9 @@
       <tr>
         <td>{{seeding.seedingNr}}</td>
         <td>{{seeding.player.lastName}}</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>4TH</td>
+        <td class='info-font'>lost to:</td>
+        <td>{{seeding.player.lastName}}</td>
       </tr>  
     {{/each}}  
   </tbody>      

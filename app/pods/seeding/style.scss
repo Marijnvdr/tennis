@@ -1,10 +1,40 @@
 table.colored-table {
   max-width: 100%;
   width: 100%;
+  border-spacing: 0;
   table-layout: fixed;
-  background-color: yellow;
-    
+  overflow: hidden;
+  
   th {
-    background-color: purple;
+    padding: 10px;
+    text-align: left;
+    background-color: #D9EDF7;
   }
+  
+  td {
+    padding: 5px 10px; 
+    text-align: left;    
+  }
+  
+  tr {
+    background-color:#F2DEDE;
+  }
+  
+  .skipped-tournament {
+    background-color: #E8ECED;
+  }
+  
+  .lost {
+    background-color: #F2DEDE;
+  }
+  
+  .won {
+    background-color: #DFF0D8;
+  }
+}
+
+.info-font {
+  font-size:smaller;
+  font-style:italic;
+  
 }
