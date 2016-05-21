@@ -1,0 +1,41 @@
+<h2>Results of seeded players:</h2>
+
+<table class="colored-table">
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>Player1</th>
+      <th>Player2</th>
+      <th>Set1</th>
+      <th></th>
+      <th>Set2</th>
+      <th></th>
+      <th>Set3</th>
+      <th></th>
+      <th>Set4</th>
+      <th></th>
+      <th>Set5</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |result|}}
+      <tr>
+        <td>{{result.round}}</td>
+        <td>{{result.player1.lastName}}</td>
+        <td>{{result.player2.lastName}}</td>
+        <td>{{result.set1Pl1}}</td>
+        <td>{{result.set1Pl2}}</td>
+        <td>{{result.set2Pl1}}</td>
+        <td>{{result.set2Pl2}}</td>
+        <td>{{result.set3Pl1}}</td>
+        <td>{{result.set3Pl2}}</td>
+        <td>{{result.set4Pl1}}</td>
+        <td>{{result.set4Pl2}}</td>
+        <td>{{result.set5Pl1}}</td>
+        <td>{{result.set5Pl2}}</td>
+      </tr>  
+    {{/each}}  
+  </tbody>      
+</table>  
+
