@@ -7,6 +7,8 @@ export default function() {
   this.get('/players');
   this.get('/seedings');
   this.get('/results');
+  this.get('/matches');
+  this.get('/results/:id');
   this.get('/players/:id');
   
   this.pretender.handledRequest = function(verb, path, request) {

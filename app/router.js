@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('player', { path: '/' });
   this.route('seeding', { path: '/seeding' });
   this.route('result', { path: '/result' });
+  this.route('tournament', { path: '/tournament' });
 });
 
 export default Router;
