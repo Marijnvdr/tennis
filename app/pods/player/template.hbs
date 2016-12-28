@@ -10,6 +10,19 @@
   Australian Open 2016 final
 {{/link-to}}
 
+{{#paper-autocomplete
+  options=model
+  label="Choose a player..."
+  searchField="lastName"
+  selected=selectedPlayer.lastName
+  onSelectionChange=(action (mut selectedPlayer))
+  as |player self|}}
+  {{paper-autocomplete-highlight
+    label=player.lastName
+    searchText=self.searchText
+    flags="i"}}
+{{/paper-autocomplete}}
+
 <h1>Player list:</h1>
 <ul>
   {{#each model as |person|}}
