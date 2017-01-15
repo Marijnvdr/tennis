@@ -11,7 +11,7 @@
 {{/link-to}}
 
 {{#paper-autocomplete
-  options=model
+  options=model.players
   label="Choose a player..."
   searchField="lastName"
   selected=selectedPlayer.lastName
@@ -22,6 +22,15 @@
     searchText=self.searchText
     flags="i"}}
 {{/paper-autocomplete}}
+
+{{#paper-select
+  label="Choose a tournament..."
+  options=model.tournaments
+  selected=myTournament
+  onChange=(action (mut myTournament))
+  as |tournament|}}
+  {{tournament}}
+{{/paper-select}}
 
 <h1>Player list:</h1>
 <ul>
