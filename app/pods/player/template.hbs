@@ -32,6 +32,15 @@
   {{tournament}}
 {{/paper-select}}
 
+{{#paper-select
+  label="Choose a period..."
+  options=model.period
+  selected=myPeriod
+  onChange=(action (mut myPeriod))
+  as |period|}}
+  {{period}}
+{{/paper-select}}
+
 <h1>Player list:</h1>
 <ul>
   {{#each model.players as |person|}}

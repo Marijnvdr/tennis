@@ -4,4 +4,4 @@ export default {
   RolandGarros: 'Roland Garros',
   Wimbledon: 'Wimbledon',
   UsOpen: 'US Open'
-}
+};

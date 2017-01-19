@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import Players from 'tennis/mirage/data/players';
 import Seedings from 'tennis/mirage/data/seedings';
 
@@ -31,7 +30,7 @@ export default function(server) {
     set1Tiebreak: null, set3Tiebreak: 3, set4Tiebreak: null, set5Tiebreak: null, 
     nrOfSetsWonByPl1: 3, nrOfSetsWonByPl2: 0, retired: null });
 
-  let m1 = server.create('match', { currentMatch: f, previousRound: { sf1, sf2 }  });  
+  // let m1 = server.create('match', { currentMatch: f, previousRound: { sf1, sf2 }  });  
 }
 
 function getPlayers() {
