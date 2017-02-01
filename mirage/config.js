@@ -10,6 +10,9 @@ export default function() {
   this.get('/matches');
   this.get('/results/:id');
   this.get('/players/:id');
+  // this.get('domain-invitations/:id');
+  // this.get('player-invitations/:id');    
+  this.get('invitations/:id');
   
   this.pretender.handledRequest = function(verb, path, request) {
     console.info(`Request ${path} (verb: ${verb}) has response: ${request.responseText}`);
