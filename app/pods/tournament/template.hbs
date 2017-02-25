@@ -1,12 +1,8 @@
-{{!-- --
-{{#each model as |match|}}
-  {{tournament-match match=match.currentMatch}} 
-{{/each}}  
---}}
-
-<label>City:</label><label>{{model.domainInvitation.city}}</label> 
-<br />
-<br />
-<label>Player City:</label><label>{{model.playerInvitation.city}}</label> 
-<br />
-<label>Player Name:</label><label>{{model.playerInvitation.player.lastName}}</label> 
+<div class="tournament-container">
+  {{#each model as |match|}}
+    {{tournament-match match=match.currentMatch}} 
+  {{/each}}  
+  {{#paper-button onClick=(action "changeColorToGreen")}}Go Green{{/paper-button}}
+  {{#paper-button onClick=(action "changeColorToRed")}}Go Red{{/paper-button}}
+  <label class="test-color">TESTING</label> 
+</div>

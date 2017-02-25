@@ -31,11 +31,6 @@ export default function(server) {
     nrOfSetsWonByPl1: 3, nrOfSetsWonByPl2: 0, retired: null });
 
   server.create('match', { currentMatch: f, previousRound: { sf1, sf2 }  });  
-
-  let player = server.db.players.find(1); 
-  let domainInvitation = server.create('domain-invitation');
-  let playerInvitation = server.create('player-invitation', { playerId: 1 });  
-  server.create('invitation', { domainInvitation, playerInvitation });
 }
 
 function getPlayers() {

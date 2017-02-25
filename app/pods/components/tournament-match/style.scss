@@ -1,0 +1,26 @@
+.match-container {
+  background-color: #DFF0D8; 
+  height: 70px;
+  width: 330px;
+  border-radius: 6px;
+}
+
+.player-container {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.player-name-container {
+  float: left;
+  width: 140px
+}
+
+.set-container {
+  float: left;
+  width: 30px;
+  text-align: right
+}
+
+.next-player {
+  clear: left;
+}
