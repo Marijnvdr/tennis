@@ -1,6 +1,6 @@
 export default {
   AllGrandslams: 'All Grand Slams',
-  AusOpen: 'Australian Open',
+  AustralianOpen: 'Australian Open',
   RolandGarros: 'Roland Garros',
   Wimbledon: 'Wimbledon',
   UsOpen: 'US Open'

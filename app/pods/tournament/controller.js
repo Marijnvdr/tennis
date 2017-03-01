@@ -1,20 +1,6 @@
 import Ember from 'ember';
-// import sassVariables from 'tennis/app/utils/sass-variables';
+import Constants from 'tennis/config/constants';
 
 export default Ember.Controller.extend({
-  sv: null,
-
-  init() {
-    // this.set('sv', sassVariables);
-  },
-
-  actions: {  
-    changeColorToGreen() {
-      alert('test green');
-    },
-    changeColorToRed() {
-      alert('test red');
-    }
-    
-  }
+  tournamentName: Constants.Wimbledon
 });

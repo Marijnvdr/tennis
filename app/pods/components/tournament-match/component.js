@@ -6,13 +6,11 @@ export default Ember.Component.extend({
     match: null,
     tournament: null
   },
-  classNames: ['match-container'],
+  
+  classNames: ['match-container', 'font-small'],
   classNameBindings: ['matchColor'],
+  
   matchColor: Ember.computed('tournament', function() {
-    if (this.tournament == Constants.RolandGarros) {
-      return 'color-red';
-    } else {
-      return 'color-green';
-    }
+    return 'color-' + this.get('tournament').dasherize();  
   })
 });

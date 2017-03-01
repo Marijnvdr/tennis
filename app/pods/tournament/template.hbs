@@ -2,10 +2,7 @@
   {{#each model as |match|}}
     {{tournament-match 
       match=match.currentMatch
-      tournament='Roland Garros'
+      tournament=tournamentName
       }} 
   {{/each}}  
-  {{#paper-button onClick=(action "changeColorToGreen")}}Go Green{{/paper-button}}
-  {{#paper-button onClick=(action "changeColorToRed")}}Go Red{{/paper-button}}
-  <label class="test-color">TESTING</label> 
 </div>

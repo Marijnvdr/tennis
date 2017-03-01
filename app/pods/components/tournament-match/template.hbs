@@ -1,4 +1,4 @@
-<div class="player-container">
+<div class="player-container  {{result-state-class match.player1.id match.winner}}">
   <div class="player-name-container">
     {{match.player1.lastName}}
   </div>
@@ -18,7 +18,7 @@
     {{match.set5Pl1}}
   </div>      
 </div>
-<div class="player-container next-player">
+<div class="player-container next-player  {{result-state-class match.player2.id match.winner}}">
   <div class="player-name-container">
     {{match.player2.lastName}}
   </div>
