@@ -1,6 +1,9 @@
 <div class="tournament-container">
   {{#each model as |match|}}
-    {{tournament-match match=match.currentMatch}} 
+    {{tournament-match 
+      match=match.currentMatch
+      tournament='Roland Garros'
+      }} 
   {{/each}}  
   {{#paper-button onClick=(action "changeColorToGreen")}}Go Green{{/paper-button}}
   {{#paper-button onClick=(action "changeColorToRed")}}Go Red{{/paper-button}}
