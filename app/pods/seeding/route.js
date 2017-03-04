@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       return this.store.query('seeding', { year: params.year }); // not very well supported by Mirage
     } else {
       return this.store.findAll('seeding');
-    } 
+    }
     */
     return this.store.findAll('seeding').then((seedings) => {
       if (!params.year) {

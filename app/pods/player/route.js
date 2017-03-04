@@ -10,7 +10,7 @@ export default Ember.Route.extend({
     {
       periodItems.push(i);
     }
-    
+
     return Ember.RSVP.hash({
       players: this.store.findAll('player'),
       tournaments: [Constants.AllGrandslams, Constants.AusOpen, Constants.RolandGarros, Constants.Wimbledon, Constants.UsOpen],
