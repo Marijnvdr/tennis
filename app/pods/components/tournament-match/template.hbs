@@ -1,6 +1,6 @@
 <div class="player-container  {{player1ResultStateClass}}">
   <div class="player-name-container">
-    {{match.player1.lastName}}
+    {{#link-to "player" (query-params player=match.player1.id) class="player-link"}}{{match.player1.lastName}}{{/link-to}}
   </div>
   <div class="set-container">
     {{match.set1Pl1}}
@@ -20,7 +20,7 @@
 </div>
 <div class="player-container next-player {{player2ResultStateClass}}">
   <div class="player-name-container">
-    {{match.player2.lastName}}
+    {{#link-to "player" (query-params player=match.player2.id) class="player-link"}}{{match.player2.lastName}}{{/link-to}}
   </div>
   <div class="set-container">
     {{match.set1Pl2}}

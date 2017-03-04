@@ -14,8 +14,8 @@
   options=model.players
   label="Choose a player..."
   searchField="lastName"
-  selected=selectedPlayer.lastName
-  onSelectionChange=(action (mut selectedPlayer))
+  selected=model.selectedPlayer.lastName
+  onSelectionChange=(action (mut model.selectedPlayer))
   as |player self|}}
   {{paper-autocomplete-highlight
     label=player.lastName
