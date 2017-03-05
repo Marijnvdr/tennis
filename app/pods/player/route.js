@@ -11,14 +11,9 @@ export default Ember.Route.extend({
       periodItems.push(i);
     }
 
-    let selectedPlayer = null;
-    if (params.player) {
-      selectedPlayer = this.store.findRecord('player', params.player);
-    }
-
     return Ember.RSVP.hash({
       players: this.store.findAll('player'),
-      selectedPlayer:  selectedPlayer,
+      selectedPlayer: (params.player) ? this.store.findRecord('player', params.player) : null,
       tournaments: [Constants.AllGrandslams, Constants.AusOpen, Constants.RolandGarros, Constants.Wimbledon, Constants.UsOpen],
       period: periodItems
     });
