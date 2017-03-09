@@ -9,7 +9,7 @@ module.exports = function(defaults) {
       includePaths: [
         'app'
       ]
-    }    
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

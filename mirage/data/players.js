@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Object.extend({
   getFirstName() {
-    let ar = 
+    let ar =
     ['Roger',
     'Novak',
     'Rafael',
@@ -329,11 +329,11 @@ export default Ember.Object.extend({
     'Noah',
     'Mirza',
     'Pierre-Hugues'];
-    return ar;  
+    return ar;
   },
-  
+
   getLastName() {
-    let ar = 
+    let ar =
       ['Federer',
       'Djokovic',
       'Nadal',
@@ -661,5 +661,5 @@ export default Ember.Object.extend({
       'Basic',
       'Herbert'];
       return ar;
-    }  
+    }
 });

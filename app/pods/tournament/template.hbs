@@ -1,8 +1,18 @@
 <div class="tournament-container">
-  {{#each model as |match|}}
+  {{#each matches4Rnd as |match|}}
+  <div class="match-container-4rnd">
     {{tournament-match
-      match=match.currentMatch
+      match=match
       tournament=tournamentName
       }}
+  </div>
+  {{/each}}
+  {{#each matchesQf as |match|}}
+  <div class="match-container-qf">
+    {{tournament-match
+      match=match
+      tournament=tournamentName
+      }}
+  </div>
   {{/each}}
 </div>
