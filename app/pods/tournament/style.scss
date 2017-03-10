@@ -1,13 +1,36 @@
 .tournament-container {
   margin-left: 20px;
   margin-top: 10px;
+  hr {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.rnd4-container {
 }
 
 .match-container-4rnd {
   margin-bottom: 20px;
 }
 
+.qf-container {
+  hr {
+    margin-bottom: 50px;
+  }
+}
+
 .match-container-qf {
-  float: right;
-  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-bottom: 110px;
+}
+
+.tournament-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.round-title {
+  font-size: .85em;
+  font-family: "Trebuchet MS"
 }

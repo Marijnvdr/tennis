@@ -1,18 +1,29 @@
 <div class="tournament-container">
-  {{#each matches4Rnd as |match|}}
-  <div class="match-container-4rnd">
-    {{tournament-match
-      match=match
-      tournament=tournamentName
-      }}
+  <span class="tournament-title">{{tournamentName}}</span>
+  <div class="layout-row">
+    <div class="rnd4-container">
+      <span class="round-title">4TH round</span>
+      <hr />
+      {{#each matches4Rnd as |match|}}
+      <div class="match-container-4rnd">
+        {{tournament-match
+          match=match
+          tournament=tournamentName
+          }}
+      </div>
+      {{/each}}
+    </div>
+    <div class="qf-container">
+      <span class="round-title">QF</span>
+      <hr />
+      {{#each matchesQf as |match|}}
+      <div class="match-container-qf">
+        {{tournament-match
+          match=match
+          tournament=tournamentName
+          }}
+      </div>
+      {{/each}}
+    </div>
   </div>
-  {{/each}}
-  {{#each matchesQf as |match|}}
-  <div class="match-container-qf">
-    {{tournament-match
-      match=match
-      tournament=tournamentName
-      }}
-  </div>
-  {{/each}}
 </div>
