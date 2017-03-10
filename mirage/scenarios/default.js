@@ -91,23 +91,6 @@ export default function(server) {
     set1Pl1: 6, set1Pl2: 1, set2Pl1: 7, set2Pl2: 5, set3Pl1: 7, set3Pl2: 6, set4Pl1: null, set4Pl2: null, set5Pl1: null, set5Pl2: null,
     set1Tiebreak: null, set3Tiebreak: 3, set4Tiebreak: null, set5Tiebreak: null,
     nrOfSetsWonByPl1: 3, nrOfSetsWonByPl2: 0, retired: null });
-/*
-  server.create('match', { currentMatch: final, previousRound: { sf1, sf2 }  });
-  server.create('match', { currentMatch: sf1  });
-  server.create('match', { currentMatch: sf2  });
-  server.create('match', { currentMatch: qf1  });
-  server.create('match', { currentMatch: qf2  });
-  server.create('match', { currentMatch: qf3  });
-  server.create('match', { currentMatch: qf4  });
-  server.create('match', { currentMatch: f1  });
-  server.create('match', { currentMatch: f2  });
-  server.create('match', { currentMatch: f3  });
-  server.create('match', { currentMatch: f4  });
-  server.create('match', { currentMatch: f5  });
-  server.create('match', { currentMatch: f6  });
-  server.create('match', { currentMatch: f7  });
-  server.create('match', { currentMatch: f8  });
-  */
 }
 
 function getPlayers() {

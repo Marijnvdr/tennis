@@ -1,10 +1,10 @@
 <div class="tournament-container">
   <span class="tournament-title">{{tournamentName}}</span>
   <div class="layout-row">
-    <div class="rnd4-container">
+    <div>
       <span class="round-title">4TH round</span>
       <hr />
-      {{#each matches4Rnd as |match|}}
+      {{#each model.matches4Rnd as |match|}}
       <div class="match-container-4rnd">
         {{tournament-match
           match=match
@@ -13,17 +13,45 @@
       </div>
       {{/each}}
     </div>
-    <div class="qf-container">
-      <span class="round-title">QF</span>
-      <hr />
-      {{#each matchesQf as |match|}}
-      <div class="match-container-qf">
-        {{tournament-match
-          match=match
-          tournament=tournamentName
-          }}
+    {{#if model.matchesQf}}
+      <div class="qf-container">
+        <span class="round-title">QF</span>
+        <hr />
+        {{#each model.matchesQf as |match|}}
+        <div class="match-container-qf">
+          {{tournament-match
+            match=match
+            tournament=tournamentName
+            }}
+        </div>
+        {{/each}}
       </div>
-      {{/each}}
-    </div>
+    {{/if}}
+    {{#if model.matchesSf}}
+      <div class="sf-container">
+        <span class="round-title">SF</span>
+        <hr />
+        {{#each model.matchesSf as |match|}}
+        <div class="match-container-sf">
+          {{tournament-match
+            match=match
+            tournament=tournamentName
+            }}
+        </div>
+        {{/each}}
+      </div>
+    {{/if}}
+    {{#if model.matchFinal}}
+      <div class="final-container">
+        <span class="round-title">Final</span>
+        <hr />
+        <div class="match-container-final">
+          {{tournament-match
+            match=model.matchFinal
+            tournament=tournamentName
+            }}
+        </div>
+      </div>
+    {{/if}}
   </div>
 </div>
