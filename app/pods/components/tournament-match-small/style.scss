@@ -1,0 +1,26 @@
+.match-container-small {
+  height: 110px;
+  width: 230px;
+  border-radius: 6px;
+
+  .player-container {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .set-space {
+    height: 10px;
+
+  }
+  .set-container {
+    float: left;
+    width: 30px;
+    text-align: right;
+  }
+
+  .next-player {
+    clear: left;
+  }
+}
+
+

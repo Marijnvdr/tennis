@@ -19,7 +19,7 @@
         <hr />
         {{#each model.matchesQf as |match|}}
         <div class="match-container-qf">
-          {{tournament-match
+          {{tournament-match-small
             match=match
             tournament=tournamentName
             }}
@@ -33,7 +33,7 @@
         <hr />
         {{#each model.matchesSf as |match|}}
         <div class="match-container-sf">
-          {{tournament-match
+          {{tournament-match-small
             match=match
             tournament=tournamentName
             }}
@@ -46,7 +46,7 @@
         <span class="round-title">Final</span>
         <hr />
         <div class="match-container-final">
-          {{tournament-match
+          {{tournament-match-small
             match=model.matchFinal
             tournament=tournamentName
             }}
