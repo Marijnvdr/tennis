@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       players: this.store.findAll('player'),
       selectedPlayer: (params.player) ? this.store.findRecord('player', params.player) : null,
-      tournaments: [Constants.AllGrandslams, Constants.AusOpen, Constants.RolandGarros, Constants.Wimbledon, Constants.UsOpen],
+      tournaments: [Constants.AllGrandslams, Constants.AustralianOpen, Constants.RolandGarros, Constants.Wimbledon, Constants.UsOpen],
       period: periodItems
     });
   }
