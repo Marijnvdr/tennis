@@ -1,11 +1,11 @@
-/* jshint node: true */
+/* eslint-env node */
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'tennis',
     podModulePrefix: 'tennis/pods',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -55,6 +55,6 @@ module.exports = function(environment) {
     'img-src': "'self' data:",
     'media-src': "'self'"
   }
-  
+
   return ENV;
 };
