@@ -1,12 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['player'],
-  player: null,
-
   actions: {
+    showHomePage() {
+      this.transitionToRoute('player');
+    },
+
     showPlayerResults() {
       this.transitionToRoute('tournament');
+    },
+
+    showPlayerPage() {
+      this.transitionToRoute('player');
     }
   }
 });

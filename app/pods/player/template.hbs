@@ -41,6 +41,13 @@
   {{period}}
 {{/paper-select}}
 
+{{#paper-button
+  raised=true
+  primary=true
+  onClick=(action "showPlayerResults")}}
+  GO
+{{/paper-button}}
+
 <h1>Player list:</h1>
 <ul>
   {{#each model.players as |person|}}
