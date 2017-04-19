@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Constants from 'tennis/config/constants';
 
 export default Ember.Controller.extend({
   actions: {
@@ -6,8 +7,8 @@ export default Ember.Controller.extend({
       this.transitionToRoute('player');
     },
 
-    showPlayerResults() {
-      this.transitionToRoute('tournament');
+    showPlayerResults(tournamentName) {
+      this.transitionToRoute('tournament', { queryParams: { tournamentName: tournamentName } });
     },
 
     showPlayerPage() {

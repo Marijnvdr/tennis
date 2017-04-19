@@ -75,3 +75,18 @@ a.player-link:link, a.player-link:visited, a.player-link:hover, a.player-link:ac
 {
   background-color: rgba(255,204,102,.85);
 }
+
+md-toolbar {
+  background-color: black !important;
+  min-height: 40px;
+  height: 40px;
+}
+
+md-toolbar .md-button {
+  text-transform: none;
+  font-weight: normal;
+}
+
+md-toolbar .md-button:hover {
+  font-weight: 500;
+}

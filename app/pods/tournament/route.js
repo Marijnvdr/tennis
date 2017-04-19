@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
+  model: function(params) {
     let matches = this.store.findAll('result');
 
     return Ember.RSVP.hash({
