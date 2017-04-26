@@ -10,43 +10,48 @@
   Australian Open 2016 final
 {{/link-to}}
 
-{{#paper-autocomplete
-  options=model.players
-  label="Choose a player..."
-  searchField="lastName"
-  selected=model.selectedPlayer.lastName
-  onSelectionChange=(action (mut model.selectedPlayer))
-  as |player self|}}
-  {{paper-autocomplete-highlight
-    label=player.lastName
-    searchText=self.searchText
-    flags="i"}}
-{{/paper-autocomplete}}
+<div class="layout-row layout-align-start-start choiceContainer">
+  {{#paper-autocomplete
+    label="Choose a player..."
+    options=model.players
+    triggerClass="selectPlayer"
+    searchField="lastName"
+    selected=model.selectedPlayer.lastName
+    onSelectionChange=(action (mut model.selectedPlayer))
+    as |player self|}}
+    {{paper-autocomplete-highlight
+      label=player.lastName
+      searchText=self.searchText
+      flags="i"}}
+  {{/paper-autocomplete}}
 
-{{#paper-select
-  label="Choose a tournament..."
-  options=model.tournaments
-  selected=myTournament
-  onChange=(action (mut myTournament))
-  as |tournament|}}
-  {{tournament}}
-{{/paper-select}}
+  {{#paper-select
+    label="Choose a tournament..."
+    options=model.tournaments
+    triggerClass="selectTournament"
+    selected=myTournament
+    onChange=(action (mut myTournament))
+    as |tournament|}}
+    {{tournament}}
+  {{/paper-select}}
 
-{{#paper-select
-  label="Choose a period..."
-  options=model.period
-  selected=myPeriod
-  onChange=(action (mut myPeriod))
-  as |period|}}
-  {{period}}
-{{/paper-select}}
+  {{#paper-select
+    label="Choose a period..."
+    options=model.period
+    triggerClass="selectPeriod"
+    selected=myPeriod
+    onChange=(action (mut myPeriod))
+    as |period|}}
+    {{period}}
+  {{/paper-select}}
 
-{{#paper-button
-  raised=true
-  primary=true
-  onClick=(action "showPlayerResults")}}
-  GO
-{{/paper-button}}
+  {{#paper-button
+    raised=true
+    primary=true
+    onClick=(action "showPlayerResults")}}
+    GO
+  {{/paper-button}}
+</div>
 
 <h1>Player list:</h1>
 <ul>
