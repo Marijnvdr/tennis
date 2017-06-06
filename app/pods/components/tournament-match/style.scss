@@ -17,7 +17,16 @@
 .set-container {
   float: left;
   width: 30px;
-  text-align: right
+  text-align: right;
+  padding-top: 5px;
+}
+
+.tiebreak-container {
+  float: left;
+  width: 10px;
+  min-height: 1px;
+  text-align: right;
+  font-size: xx-small;
 }
 
 .next-player {
