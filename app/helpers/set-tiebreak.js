@@ -1,12 +1,10 @@
 import Ember from 'ember';
 
-export default function setTiebreakComputed(playerProperty, tiebreakProperty) {
-  return Ember.computed(`match.${playerProperty}`, function() {
-    let match = this.get('match');
+export default Ember.Helper.extend({
+  compute([match], namedArgs) {
     if (match !== undefined) {
       let winner = match.get('winner');
-      let playerId = match.get(`${playerProperty}.id`);
-      let tiebreakLost = match.get(`${tiebreakProperty}`);
+      let tiebreakLost = match.get(`set${namedArgs.set}Tiebreak`);
       let tiebreakWon = 7;
       if (tiebreakLost) {
         if (tiebreakLost > 5) {
@@ -15,11 +13,11 @@ export default function setTiebreakComputed(playerProperty, tiebreakProperty) {
       } else {
         tiebreakWon = '';
       }
-      if (playerId == winner) {
+      if (namedArgs.player == winner) {
         return tiebreakWon;
       } else {
         return tiebreakLost;
       }
     }
-  });
-}
+  }
+});
