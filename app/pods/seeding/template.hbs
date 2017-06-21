@@ -18,8 +18,16 @@
         <td>4TH</td>
         <td class='info-font'>lost to:</td>
         <td>{{seeding.player.lastName}}</td>
-      </tr>  
-    {{/each}}  
-  </tbody>      
-</table>  
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div class="pagination">
+  <ul>
+    <li>{{#link-to "seeding" (query-params page="1")}}1{{/link-to}}</li>
+    <li>{{#link-to "seeding" (query-params page="3")}}2{{/link-to}}</li>
+  </ul>
+</div>
+
 

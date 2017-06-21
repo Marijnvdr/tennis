@@ -9,12 +9,30 @@ export default Ember.Route.extend({
       return this.store.findAll('seeding');
     }
     */
-    return this.store.findAll('seeding').then((seedings) => {
-      if (!params.year) {
-        return seedings;
-      } else {
-        return seedings.filterBy('year', Number(params.year));
+    if (!params.year) {
+      params.year = '2016';
+    }
+    if (!params.page) {
+      params.page = '1';
+    }
+    let page = Number(params.page);
+    if (page < 1) {
+      page = 1;
+    } else {
+      if (page > 2) {
+        page = 2;
       }
+    }
+    let begin = (page - 1) * 16;
+    let end = page * 16;
+    return this.store.findAll('seeding').then((seedings) => {
+      return seedings.filterBy('year', Number(params.year)).slice(begin, end);
     });
+  },
+
+  queryParams: {
+    page: {
+      refreshModel: true
+    }
   }
 });
